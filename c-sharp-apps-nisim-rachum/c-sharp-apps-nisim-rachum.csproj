@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankApp\BankAppMain.cs" />
+    <Compile Include="Common\ProcessManager.cs" />
     <Compile Include="DraftApp\DraftAppMain.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
