@@ -6,17 +6,8 @@ using System.Threading.Tasks;
 
 namespace c_sharp_apps_nisim_rachum.SportApp
 {
-    public class SportAppMain
+    public class Round
     {
-        public static void MainEntry()
-        { 
-            Console.WriteLine("SportApp");
-
-            
-
-
-        }
-
-
+        private int numsRounds =0;
     }
 }
