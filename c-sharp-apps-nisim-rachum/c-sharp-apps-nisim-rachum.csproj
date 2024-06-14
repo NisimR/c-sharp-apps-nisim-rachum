@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>c_sharp_apps_nisim_rachum.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankApp\Account.cs" />
     <Compile Include="BankApp\BankAppMain.cs" />
+    <Compile Include="BankApp\Owner.cs" />
+    <Compile Include="BankApp\TestAccount.cs" />
     <Compile Include="Common\ProcessManager.cs" />
     <Compile Include="DraftApp\DraftAppMain.cs" />
     <Compile Include="Program.cs" />

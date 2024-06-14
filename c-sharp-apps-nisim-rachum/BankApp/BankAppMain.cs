@@ -9,6 +9,10 @@ namespace c_sharp_apps_nisim_rachum.BankApp
     internal class BankAppMain
     {
         public static void MainEntry ()
-        { Console.WriteLine("BankApp"); }
+        { Console.WriteLine("BankApp");
+
+            TestAccount.Test1();
+
+        }
     }
 }
