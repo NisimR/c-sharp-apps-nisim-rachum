@@ -12,6 +12,8 @@ namespace c_sharp_apps_nisim_rachum
         static void Main(string[] args)
         {
             ProcessManager.RunMainProcess();
+
+            
         }
     }
 }
