@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace c_sharp_apps_nisim_rachum.TransportationApp
 {
-    internal class TransportationAppMain
+    public class TransportationAppMain
     {
         public static void MainEntry()
-        { Console.WriteLine("TransportationApp"); }
+        { 
+            Console.WriteLine("TransportationApp");
+            MonitorTransportation m = new MonitorTransportation();
+            m.Test1();
+        
+        }
     }
 }

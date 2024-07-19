@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace c_sharp_apps_nisim_rachum.SportApp
 {
-    internal class SportAppMain
+    public class SportAppMain
     {
         public static void MainEntry()
         { Console.WriteLine("SportApp"); }
