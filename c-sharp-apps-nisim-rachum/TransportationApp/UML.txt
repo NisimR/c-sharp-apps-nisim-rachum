@@ -1,0 +1,120 @@
++--------------------+
+|      IPortable     |
++--------------------+
+| +GetArea(): decimal|
+| +GetSize(): int[]  |
+| +GetVolume(): decimal|
+| +GetWeight(): decimal|
+| +PackageItem(): void|
+| +IsPackaged(): bool |
+| +UnPackage(): void  |
+| +IsFragile(): bool  |
+| +GetLocation(): StorageStructure|
+| +IsLoaded(): bool   |
++--------------------+
+
++--------------------+
+|    IContainable    |
++--------------------+
+| +Load(item: IPortable): bool |
+| +Load(items: List<IPortable>): bool |
+| +Unload(): bool    |
+| +Unload(item: IPortable): bool |
+| +Unload(items: List<IPortable>): bool |
+| +IsHaveRoom(): bool |
+| +IsOverload(): bool |
+| +GetMaxVolume(): decimal |
+| +GetMaxWeight(): decimal |
+| +GetCurrentVolume(): decimal |
+| +GetCurrentWeight(): decimal |
++--------------------+
+
++--------------------+
+| IShippingPriceCalculator |
++--------------------+
+| +CalculatePrice(item: IPortable, travelDistance: int): decimal |
+| +CalculatePrice(items: List<IPortable>, travelDistance: int): decimal |
++--------------------+
+
++--------------------+
+| StorageStructure (abstract) |
+| Implements: IContainable   |
++--------------------+
+| -Country: string   |
+| -City: string      |
+| -Street: string    |
+| -Number: int       |
++--------------------+
+| +Load(item: IPortable): bool (abstract) |
+| +Load(items: List<IPortable>): bool (abstract) |
+| +Unload(): bool (abstract) |
+| +Unload(item: IPortable): bool (abstract) |
+| +Unload(items: List<IPortable>): bool (abstract) |
+| +IsHaveRoom(): bool (abstract) |
+| +IsOverload(): bool (abstract) |
+| +GetMaxVolume(): decimal (abstract) |
+| +GetMaxWeight(): decimal (abstract) |
+| +GetCurrentVolume(): decimal (abstract) |
+| +GetCurrentWeight(): decimal (abstract) |
++--------------------+
+
++--------------------+
+|    CargoVehicle (abstract) |
+| Inherits: StorageStructure |
+| Implements: IContainable  |
++--------------------+
+| -Driver: Driver    |
+| -MaxWeight: decimal|
+| -MaxVolume: decimal|
+| -IsReadyToTravel: bool|
+| -IsOverloaded: bool|
+| -NextPort: Port    |
+| -CurrentPort: Port |
+| -TravelID: int     |
+| -Items: List<IPortable> |
+| -ExpectedPayment: decimal |
+| -PriceCalculator: IShippingPriceCalculator |
+| -TravelDistance: int |
++--------------------+
+| +Load(item: IPortable): bool (abstract) |
+| +Load(items: List<IPortable>): bool (abstract) |
+| +Unload(): bool (abstract) |
+| +Unload(item: IPortable): bool (abstract) |
+| +Unload(items: List<IPortable>): bool (abstract) |
+| +GetPricingList(): string (virtual) |
++--------------------+
+
++--------------------+
+|      Port          |
+| Inherits: StorageStructure |
++--------------------+
+| -PortType: CargoType |
++--------------------+
+
++--------------------+
+|      Warehouse     |
+| Inherits: StorageStructure |
++--------------------+
+
++--------------------+
+|      Driver        |
++--------------------+
+| -FirstName: string |
+| -LastName: string  |
+| -ID: string        |
+| -CargoType: CargoType |
++--------------------+
+| +Approve(vehicle: CargoVehicle): void |
++--------------------+
+
++--------------------+
+|      CargoType     |
+| enum               |
++--------------------+
+| +PrivateCar        |
+| +Motorcycle        |
+| +Truck             |
+| +Plane             |
+| +Train             |
+| +Ship              |
++--------------------+

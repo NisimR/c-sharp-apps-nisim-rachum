@@ -56,16 +56,38 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SportApp\SportAppMain.cs" />
     <Compile Include="TransportationApp\Bus.cs" />
+    <Compile Include="TransportationApp\CargoTruck.cs" />
+    <Compile Include="TransportationApp\CargoAirplane.cs" />
+    <Compile Include="TransportationApp\CargoTrain.cs" />
+    <Compile Include="TransportationApp\CargoType.cs" />
+    <Compile Include="TransportationApp\CargoVehicle.cs" />
+    <Compile Include="TransportationApp\Container.cs" />
+    <Compile Include="TransportationApp\Furnitures.cs" />
     <Compile Include="TransportationApp\Crone.cs" />
+    <Compile Include="TransportationApp\Driver.cs" />
+    <Compile Include="TransportationApp\ElectricalItem.cs" />
+    <Compile Include="TransportationApp\Furniture.cs" />
+    <Compile Include="TransportationApp\GeneralItem.cs" />
+    <Compile Include="TransportationApp\IContainable.cs" />
+    <Compile Include="TransportationApp\IPortable.cs" />
+    <Compile Include="TransportationApp\IShippingPriceCalculator.cs" />
     <Compile Include="TransportationApp\MonitorTransportation.cs" />
     <Compile Include="TransportationApp\PassengersAirplain.cs" />
     <Compile Include="TransportationApp\PassengersTrain.cs" />
+    <Compile Include="TransportationApp\Port.cs" />
     <Compile Include="TransportationApp\PublicVehicle.cs" />
+    <Compile Include="TransportationApp\CargoShip.cs" />
+    <Compile Include="TransportationApp\ShippingPriceCalculator.cs" />
+    <Compile Include="TransportationApp\ShippingTests.cs" />
+    <Compile Include="TransportationApp\StorageStructure.cs" />
     <Compile Include="TransportationApp\TransportationAppMain.cs" />
+    <Compile Include="TransportationApp\Warehouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="TransportationApp\UML.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
